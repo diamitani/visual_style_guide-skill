@@ -1,12 +1,18 @@
+---
+name: visual-style-guide
+description: >
+  This is the design system for every diagram this skill draws. Follow it exactly; consistency is what makes the output look professional. Pick one theme per diagram. {{COMPANY_NAME}} is the default. | Token | {{COMPANY_NAME}} (default) | Slate | Midnight | Blueprint | Warm | Use this skill when working with visual style guide tasks or workflows.
+---
+
 # Visual Style Guide — Hand-Crafted SVG Diagrams
 
 This is the design system for every diagram this skill draws. Follow it exactly; consistency is what makes the output look professional.
 
 ## 1. Themes
 
-Pick one theme per diagram. {{COMPANY_NAME}} is the default.
+Pick one theme per diagram. Enterprise Platform is the default.
 
-| Token | {{COMPANY_NAME}} (default) | Slate | Midnight | Blueprint | Warm |
+| Token | Enterprise Platform (default) | Slate | Midnight | Blueprint | Warm |
 |---|---|---|---|---|---|
 | `bg` | `#F7F8FC` | `#F5F5F4` | `#0E1220` | `#0A1A33` | `#FBF7F1` |
 | `surface` | `#FFFFFF` | `#FFFFFF` | `#1A2138` | `#10264A` | `#FFFFFF` |
@@ -16,9 +22,9 @@ Pick one theme per diagram. {{COMPANY_NAME}} is the default.
 | `accent` | `#0559FA` | `#0D9488` | `#5B8CFF` | `#4CC3FF` | `#E1553F` |
 | `accent-soft` | `#E7EEFF` | `#CCFBF1` | `#26335C` | `#123059` | `#FBE3DE` |
 | `line` | `#D9DFEE` | `#D6D3D1` | `#333E63` | `#1E4270` | `#E7DCD0` |
-| `ok / warn / err` | `#0E9F6E / #D97706 / #DC2626` | same | `#34D399 / #FBBF24 / #F87171` | same as Midnight | same as {{COMPANY_NAME}} |
+| `ok / warn / err` | `#0E9F6E / #D97706 / #DC2626` | same | `#34D399 / #FBBF24 / #F87171` | same as Midnight | same as Enterprise Platform |
 
-Theme use: **{{COMPANY_NAME}}** for {{COMPANY_NAME}} / GTM work. **Slate** for neutral technical docs. **Midnight** for dark-mode decks. **Blueprint** for infra/network topology. **Warm** for journeys, org charts, people-centric maps.
+Theme use: **Enterprise Platform** for Enterprise Platform / GTM work. **Slate** for neutral technical docs. **Midnight** for dark-mode decks. **Blueprint** for infra/network topology. **Warm** for journeys, org charts, people-centric maps.
 
 On dark themes (`Midnight`, `Blueprint`): cards use `surface`, text uses `ink`, subtitle uses `ink-muted`, shadows are skipped (use a 1px `line` stroke instead).
 
@@ -63,7 +69,7 @@ Standard card, drawn in this order:
 ```
 
 Variants:
-- **Primary / hero node**: fill `surface-dark`, title `#FFFFFF`, subtitle a light tint of accent (`#8FB5FF` on {{COMPANY_NAME}})
+- **Primary / hero node**: fill `surface-dark`, title `#FFFFFF`, subtitle a light tint of accent (`#8FB5FF` on Enterprise Platform)
 - **External system**: `stroke-dasharray="6 4"` border, no accent bar
 - **Data store**: card + stacked-disc glyph left of title (two ellipses `rx=14 ry=5`, one 6px below the other, `stroke={accent}` `fill={accent-soft}`)
 - **Queue / topic**: pill (`rx = height/2`)
@@ -74,7 +80,7 @@ Variants:
 ## 5. Edges
 
 - **Primary flow**: `stroke={accent}` `stroke-width="2.5"`
-- **Secondary call**: `stroke={line-darkened}` (`#A9B3CC` on {{COMPANY_NAME}}) `stroke-width="1.75"`
+- **Secondary call**: `stroke={line-darkened}` (`#A9B3CC` on Enterprise Platform) `stroke-width="1.75"`
 - **Async / event / observability**: `stroke-dasharray="7 5"`
 - Orthogonal routing with rounded corners: `M x1 y1 H xm Q ... V ...` or straight lines; never diagonal spaghetti
 - **Arrowheads are explicit polygons** (markers do NOT render in the PNG pipeline). Triangle pointing right at line end `(x,y)`:
